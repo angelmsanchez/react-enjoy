@@ -1,12 +1,15 @@
 import * as React from 'react';
 
-export default class Square extends React.Component<any, any> {
+interface Props {
+  value: string;
+  onClick: any
+};
+interface State { };
 
-  constructor(props: any) {
+export default class Square extends React.Component<Props, State> {
+
+  constructor(props: Props) {
     super(props);
-    this.state = {
-      value: null,
-    };
   }
 
   render() {

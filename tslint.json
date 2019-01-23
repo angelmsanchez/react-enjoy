@@ -12,8 +12,19 @@
     ]
   },
   "rules": {
+    "jsx-boolean-value": false,
     "jsx-no-lambda": false,
+    "interface-name": false,
     "member-access": false,
+    "no-empty-interface": false,
+    "no-console": [
+      true,
+      "debug",
+      "info",
+      "time",
+      "timeEnd",
+      "trace"
+    ],
     "object-literal-shorthand": false
   }
 }

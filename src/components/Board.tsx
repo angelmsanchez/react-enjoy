@@ -1,10 +1,15 @@
 import * as React from 'react';
 
-// import Square from './Square';
+import Square from './Square';
 
-class Board extends React.Component {
+interface Props { };
+interface State {
+  squares: string[]
+};
 
-  constructor(props: any) {
+export default class Board extends React.Component<Props, State> {
+
+  constructor(props: Props) {
     super(props);
     this.state = {
       squares: Array(9).fill(null),
@@ -12,18 +17,18 @@ class Board extends React.Component {
   }
 
   handleClick(i: any): void {
-    // const squares = this.state.squares.slice();
-    // squares[i] = 'X';
-    // this.setState({ squares: squares });
+    const squares = this.state.squares.slice();
+    squares[i] = 'X';
+    this.setState({ squares: squares });
   }
 
   renderSquare(i: any) {
-    // return (
-    // <Square
-    //   value={this.state.squares[i]}
-    //   onClick={() => this.handleClick(i)}
-    // />
-    // );
+    return (
+      <Square
+        value={this.state.squares[i]}
+        onClick={() => this.handleClick(i)}
+      />
+    );
   }
 
   render() {
@@ -50,5 +55,3 @@ class Board extends React.Component {
     );
   }
 }
-
-export default Board;
