@@ -25,6 +25,7 @@
       "timeEnd",
       "trace"
     ],
-    "object-literal-shorthand": false
+    "object-literal-shorthand": false,
+    "ordered-imports": false
   }
 }

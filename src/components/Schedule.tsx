@@ -1,13 +1,20 @@
 import * as React from 'react';
 
-const Schedule = () => (
-  <div>
-    <ul>
-      <li>6/5 @ Evergreens</li>
-      <li>6/8 vs Kickers</li>
-      <li>6/14 @ United</li>
-    </ul>
-  </div>
-)
+interface Props {}
+interface State {}
+
+class Schedule extends React.Component<Props, State> {
+  render() {
+    return (
+      <div>
+        <ul>
+          <li>6/5 @ Evergreens</li>
+          <li>6/8 vs Kickers</li>
+          <li>6/14 @ United</li>
+        </ul>
+      </div>
+    );
+  }
+}
 
 export default Schedule;

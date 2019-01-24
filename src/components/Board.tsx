@@ -2,17 +2,16 @@ import * as React from 'react';
 
 import Square from './Square';
 
-interface Props { };
+interface Props {}
 interface State {
-  squares: string[]
-};
+  squares: string[];
+}
 
-export default class Board extends React.Component<Props, State> {
-
+class Board extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      squares: Array(9).fill(null),
+      squares: Array(9).fill(null)
     };
   }
 
@@ -55,3 +54,5 @@ export default class Board extends React.Component<Props, State> {
     );
   }
 }
+
+export default Board;
