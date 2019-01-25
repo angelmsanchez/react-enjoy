@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 
+import { FormattedMessage } from 'react-intl';
+
 import logo from '../styles/img/logo.svg';
 
 export default class Header extends React.Component {
@@ -11,8 +13,16 @@ export default class Header extends React.Component {
         <h1 className="App-title">Welcome to React</h1>
         <nav>
           <ul>
-            <li><Link to='/'>Board</Link></li>
-            <li><Link to='/schedule'>Schedule</Link></li>
+            <li>
+              <Link to="/">
+                <FormattedMessage id="link.board" />
+              </Link>
+            </li>
+            <li>
+              <Link to="/schedule">
+                <FormattedMessage id="link.schedule" />
+              </Link>
+            </li>
           </ul>
         </nav>
       </header>
