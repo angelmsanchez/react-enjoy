@@ -9,12 +9,14 @@ export default class Header extends React.Component {
   render() {
     return (
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <Link to="/">
+          <img src={logo} className="App-logo" alt="logo" />
+        </Link>
         <h1 className="App-title">Welcome to React</h1>
         <nav>
           <ul>
             <li>
-              <Link to="/">
+              <Link to="/board">
                 <FormattedMessage id="link.board" />
               </Link>
             </li>
