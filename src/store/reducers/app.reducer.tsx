@@ -1,10 +1,15 @@
-export default (state = 0, action: any) => {
+import { SET_LANGUAGE } from '../actions/app.action';
+
+const initialState: any = {
+  language: 'en'
+};
+const app = (state = initialState, action: any) => {
   switch (action.type) {
-    case 'INCREMENT':
-      return state + 1;
-    case 'DECREMENT':
-      return state - 1;
+    case SET_LANGUAGE:
+      return { ...state, ...{ language: action.payload } };
     default:
       return state;
   }
 };
+
+export default app;

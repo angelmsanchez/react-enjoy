@@ -1,6 +1,4 @@
 {
-  "link": {
-    "board": "Tablero",
-    "schedule": "Programar"
-  }
+  "link.board": "Tablero",
+  "link.schedule": "Programar"
 }

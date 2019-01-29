@@ -14,6 +14,12 @@
   color: white;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
 }
 
 .App-title {
