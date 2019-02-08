@@ -31,8 +31,8 @@ class Home extends React.Component<Props, State> {
           </button>
           <p>Counter: {this.props.counter}</p>
         </div>
-        CUSTOM ELEMEMENT
-        <my-custom-element name="Angel" answer="yes" />
+        {/* CUSTOM ELEMEMENT
+        <my-custom-element name="Angel" answer="yes" /> */}
       </div>
     );
   }

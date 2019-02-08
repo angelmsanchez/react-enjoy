@@ -40,8 +40,8 @@ class Header extends React.Component<Props, State> {
               </Link>
             </li>
             <li>
-              <Link to="/schedule">
-                <FormattedMessage id="link.schedule" />
+              <Link to="/comics">
+                <FormattedMessage id="link.comics" />
               </Link>
             </li>
           </ul>

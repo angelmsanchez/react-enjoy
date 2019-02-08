@@ -4,7 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 
 const Home = lazy(() => import('./Home'));
 const Board = lazy(() => import('./Board'));
-const Schedule = lazy(() => import('./Schedule'));
+const Comics = lazy(() => import('./Comics'));
 
 const Main = () => (
   <main>
@@ -16,8 +16,8 @@ const Main = () => (
         <Route path="/board">
           <Board />
         </Route>
-        <Route path="/schedule">
-          <Schedule />
+        <Route path="/comics">
+          <Comics />
         </Route>
       </Switch>
     </Suspense>

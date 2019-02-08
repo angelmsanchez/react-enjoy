@@ -3,10 +3,13 @@ import thunk from 'redux-thunk';
 
 import rootReducer from './reducers';
 
-const enhancers = [];
-const devToolsExtension = window['__REDUX_DEVTOOLS_EXTENSION__'];
+const enhancers: any[] = [];
 const middleware = [thunk];
-enhancers.push(devToolsExtension());
+
+if (process.env.NODE_ENV !== 'production') {
+  const devToolsExtension = window['__REDUX_DEVTOOLS_EXTENSION__'];
+  enhancers.push(devToolsExtension());
+}
 
 const composedEnhancers = compose(
   applyMiddleware(...middleware),

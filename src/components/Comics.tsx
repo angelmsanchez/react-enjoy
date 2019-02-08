@@ -1,13 +1,13 @@
 import * as React from 'react';
 
-import { comicService } from './../services/comic.service';
+import { comicService } from '../services/comic.service';
 
 interface Props {}
 interface State {
   comics: any[];
 }
 
-class Schedule extends React.Component<Props, State> {
+class Comics extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
@@ -25,7 +25,6 @@ class Schedule extends React.Component<Props, State> {
         <ul>
           {this.state.comics.map((item, index) => (
             <li key={item.id}>
-              {' '}
               <span> {item.name} </span>
             </li>
           ))}
@@ -41,4 +40,4 @@ class Schedule extends React.Component<Props, State> {
   }
 }
 
-export default Schedule;
+export default Comics;
