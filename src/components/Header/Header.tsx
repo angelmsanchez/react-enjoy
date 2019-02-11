@@ -4,8 +4,10 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
 
-import logo from '../styles/img/logo.svg';
-import { setLanguage } from './../store/actions/app.action';
+import logo from './../../styles/img/logo.svg';
+import { setLanguage } from './../../store/actions/app.action';
+
+import './Header.scss';
 
 interface Props {
   language: string;

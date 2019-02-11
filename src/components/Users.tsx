@@ -1,11 +1,13 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { withRouter, RouteComponentProps } from 'react-router-dom';
 
 import { thunkActionCreator } from './../store/actions/user.action';
 
-interface Props {
+interface Props extends RouteComponentProps<{}> {
   thunkActionCreator: any;
+  user: any;
 }
 interface State {
   getUsername: any;
@@ -28,6 +30,12 @@ class Users extends React.Component<Props, State> {
     this.setState({ getUsername: event.target.value });
   };
 
+  goToUserDetail = () => {
+    const id: string = this.props.user.userData.login;
+    console.log('goToUserDetail ' + id);
+    this.props.history.push(`/users/${id}`);
+  };
+
   render() {
     return (
       <div className="container">
@@ -41,20 +49,27 @@ class Users extends React.Component<Props, State> {
           />
           <button className="button">Submit</button>
         </form>
+        {this.props.user.userData && (
+          <button className="button" onClick={this.goToUserDetail}>
+            Go To User Detail
+          </button>
+        )}
       </div>
     );
   }
 }
 
 const mapStateToProps = (state: any) => ({
-  counter: state.user
+  user: state.user
 });
 
 const mapDispatchToProps = (dispatch: any) => ({
   thunkActionCreator: bindActionCreators(thunkActionCreator, dispatch)
 });
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Users);
+export default withRouter(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(Users)
+);

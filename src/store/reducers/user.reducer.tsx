@@ -1,7 +1,7 @@
 import { FETCH_USER, SUCCESS_USER, ERROR_USER } from '../actions/user.action';
 
 const initialState = {
-  userData: {},
+  userData: null,
   isFetching: false,
   isError: false
 };
@@ -11,7 +11,7 @@ const userReducer = (state = initialState, action: any) => {
     case FETCH_USER:
       return Object.assign({}, state, {
         isFetching: true,
-        userData: {},
+        userData: null,
         isError: false
       });
     case SUCCESS_USER:

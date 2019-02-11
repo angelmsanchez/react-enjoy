@@ -6,6 +6,7 @@ const Home = lazy(() => import('./Home'));
 const Board = lazy(() => import('./Board'));
 const Comics = lazy(() => import('./Comics'));
 const Users = lazy(() => import('./Users'));
+const UserDetail = lazy(() => import('./UserDetail'));
 
 const Main = () => (
   <main>
@@ -22,6 +23,9 @@ const Main = () => (
         </Route>
         <Route path="/users">
           <Users />
+        </Route>
+        <Route path="/users/:id">
+          <UserDetail />
         </Route>
       </Switch>
     </Suspense>
