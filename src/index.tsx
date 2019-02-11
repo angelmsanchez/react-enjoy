@@ -6,10 +6,8 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import './styles/index.scss';
 import { Provider } from 'react-redux';
-import configureStore from './store/config';
 import ConnectedIntlProvider from './ConnectedIntlProvider';
-
-const store = configureStore();
+import store from './store/store';
 
 ReactDOM.render(
   <Provider store={store}>

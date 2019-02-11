@@ -4,7 +4,6 @@ import thunk from 'redux-thunk';
 import rootReducer from './reducers';
 
 const enhancers: any[] = [];
-const middleware = [thunk];
 
 if (process.env.NODE_ENV !== 'production') {
   const devToolsExtension = window['__REDUX_DEVTOOLS_EXTENSION__'];
@@ -12,7 +11,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 const composedEnhancers = compose(
-  applyMiddleware(...middleware),
+  applyMiddleware(thunk),
   ...enhancers
 );
 

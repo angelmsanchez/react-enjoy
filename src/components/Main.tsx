@@ -5,6 +5,7 @@ import { Route, Switch } from 'react-router-dom';
 const Home = lazy(() => import('./Home'));
 const Board = lazy(() => import('./Board'));
 const Comics = lazy(() => import('./Comics'));
+const Users = lazy(() => import('./Users'));
 
 const Main = () => (
   <main>
@@ -18,6 +19,9 @@ const Main = () => (
         </Route>
         <Route path="/comics">
           <Comics />
+        </Route>
+        <Route path="/users">
+          <Users />
         </Route>
       </Switch>
     </Suspense>

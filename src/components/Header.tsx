@@ -32,7 +32,7 @@ class Header extends React.Component<Props, State> {
           <img src={logo} className="App-logo" alt="logo" />
         </Link>
         <h1 className="App-title">React Enjoy</h1>
-        <nav>
+        <nav className="nav-header">
           <ul>
             <li>
               <Link to="/board">
@@ -42,6 +42,11 @@ class Header extends React.Component<Props, State> {
             <li>
               <Link to="/comics">
                 <FormattedMessage id="link.comics" />
+              </Link>
+            </li>
+            <li>
+              <Link to="/users">
+                <FormattedMessage id="link.users" />
               </Link>
             </li>
           </ul>
