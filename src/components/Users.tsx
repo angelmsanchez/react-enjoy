@@ -9,6 +9,7 @@ interface Props extends RouteComponentProps<{}> {
   thunkActionCreator: any;
   user: any;
 }
+
 interface State {
   getUsername: any;
 }
@@ -32,7 +33,6 @@ class Users extends React.Component<Props, State> {
 
   goToUserDetail = () => {
     const id: string = this.props.user.userData.login;
-    console.log('goToUserDetail ' + id);
     this.props.history.push(`/users/${id}`);
   };
 
@@ -40,7 +40,7 @@ class Users extends React.Component<Props, State> {
     return (
       <div className="container">
         <form onSubmit={this.handleSubmit} className="form">
-          <h2 className="title">Enter the Github Username</h2>
+          <h2 className="App-title">Enter the Github Username</h2>
           <input
             type="text"
             placeholder="Enter Github Username"

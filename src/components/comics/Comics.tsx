@@ -1,6 +1,8 @@
 import * as React from 'react';
 
-import { comicService } from '../services/comic.service';
+import { comicService } from '../../services/comic.service';
+
+import './Comics.scss';
 
 interface Props {}
 interface State {
@@ -21,10 +23,10 @@ class Comics extends React.Component<Props, State> {
 
   render() {
     return (
-      <div>
+      <div id="comics">
         <ul>
           {this.state.comics.map((item, index) => (
-            <li key={item.id}>
+            <li key={item.id} className="comic">
               <span> {item.name} </span>
             </li>
           ))}

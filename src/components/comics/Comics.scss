@@ -1,0 +1,20 @@
+#comics {
+  display: flex;
+  justify-content: center;
+
+  ul {
+    list-style-type: none;
+  }
+
+  .comic {
+    max-width: 300px;
+    min-height: 50px;
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+}
