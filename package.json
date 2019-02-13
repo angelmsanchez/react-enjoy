@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "build": "node scripts/build.js",
+    "cypress": "cypress open",
+    "cypress:run": "cypress run --record --key b9518171-4889-4c9d-a8a6-f1942ee6c62c",
     "precommit": "lint-staged",
     "start": "node scripts/start.js",
     "start:dev": "cross-env NODE_ENV=dev webpack-dev-server --config config/webpack.config.dev.js --watch --open --colors",
@@ -68,7 +70,6 @@
     "whatwg-fetch": "2.0.3"
   },
   "devDependencies": {
-    "@types/jest": "^23.3.13",
     "@types/node": "^10.12.18",
     "@types/react": "^16.7.20",
     "@types/react-beautiful-dnd": "^10.0.1",
@@ -77,6 +78,7 @@
     "@types/react-redux": "^7.0.1",
     "@types/react-router-dom": "^4.3.1",
     "cross-env": "^5.2.0",
+    "cypress": "^3.1.5",
     "http-server": "^0.11.1",
     "typescript": "^3.2.4",
     "webpack": "3.8.1",

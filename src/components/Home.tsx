@@ -22,8 +22,13 @@ class Home extends React.Component<Props, State> {
   render() {
     return (
       <div className="home">
+        <h5>Example Store Redux</h5>
         <div className="header">
-          <button onClick={this.props.incrementCounter}>
+          <button
+            id="increment-button"
+            className="btn-success"
+            onClick={this.props.incrementCounter}
+          >
             Increment via redux
           </button>
           <button onClick={this.props.decrementCounter}>
