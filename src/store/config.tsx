@@ -5,10 +5,9 @@ import rootReducer from './reducers';
 
 const enhancers: any[] = [];
 
-console.log('process.env.NODE_ENV ' + process.env.NODE_ENV);
 if (process.env.NODE_ENV !== 'production') {
-  // const devToolsExtension = window['__REDUX_DEVTOOLS_EXTENSION__'];
-  // enhancers.push(devToolsExtension());
+  const devToolsExtension = window['__REDUX_DEVTOOLS_EXTENSION__'];
+  enhancers.push(devToolsExtension());
 }
 
 const composedEnhancers = compose(
